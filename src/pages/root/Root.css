@@ -1,0 +1,34 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#monogram {
+  --transform-angle: 0deg;
+  height: 15em;
+  padding: 1.5em;
+  animation-name: setRotation;
+  animation-fill-mode: forwards;
+}
+
+.fadeAway {
+  animation: fadeAway 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes setRotation {
+  to {
+    transform: rotate(var(--transform-angle));
+  }
+}
+
+@keyframes fadeAway {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
